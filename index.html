@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -73,6 +73,7 @@
       overflow: hidden;
     }
 
+    /* Glowing background circles */
     header::before,
     header::after {
       content: "";
@@ -174,60 +175,14 @@
       box-shadow: 0 8px 25px rgba(255, 159, 67, 0.4);
     }
 
-    /* Contact Section */
-    .contact {
-      padding: 100px 20px;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
+    .feature h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
     }
 
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin-top: 30px;
-      background: rgba(255, 255, 255, 0.07);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      padding: 40px;
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      padding: 15px;
-      border: none;
-      border-radius: 12px;
-      outline: none;
-      font-size: 1rem;
-      color: white;
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-    }
-
-    .contact-form textarea {
-      resize: none;
-      height: 120px;
-    }
-
-    .contact-form button {
-      padding: 14px;
-      border: none;
-      border-radius: 30px;
-      background: linear-gradient(135deg, #ff512f, #dd2476);
-      color: white;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .contact-form button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(221,36,118,0.6);
+    .feature p {
+      font-size: 0.95rem;
+      color: #ddd;
     }
 
     /* Footer */
@@ -259,7 +214,7 @@
     <div class="hero-box">
       <h1>🔥 HotDrop</h1>
       <p>Share, Discover & Trend Instantly</p>
-      <a href="#contact" class="btn">Get Started</a>
+      <a href="#" class="btn">Get Started</a>
     </div>
   </header>
 
@@ -286,27 +241,15 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message..." required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
   <!-- Footer -->
-  <footer>
+  <footer id="contact">
     © 2025 HotDrop. All rights reserved.
   </footer>
 
   <script>
-    // Simple JS: handle form submission
-    document.querySelector(".contact-form").addEventListener("submit", e => {
-      e.preventDefault();
-      alert("✅ Thank you for contacting HotDrop! We’ll get back to you soon.");
+    // Example interaction
+    document.querySelector(".btn").addEventListener("click", () => {
+      alert("🚀 HotDrop is launching soon!");
     });
   </script>
 </body>
